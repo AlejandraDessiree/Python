@@ -1,34 +1,6 @@
 from ProjectModule import player_2
 
-
-img_rock = ('''
-    _______
-  /       
- /         
-|   ROCK   |
- \         /
-  \_______/''')
-
-img_paper = ('''   
-    _______
-  /       
- /         
-|   PAPER  |
- \         /
-  \_______/''')
-
-img_siccors = ('''   
-    _______
-  /       
- /         
-| SCISSORS |
- \         /
-  \_______/''')
-
 print("Lets play Rock, Paper and Siccors")
-global player_1
-
-
 player_1 = input("Rock is \"1\", Paper is \"2\" and Siccors is \"3\"\n")
 
 while player_1 not in ["1", "2", "3"]:
@@ -38,43 +10,108 @@ while player_1 not in ["1", "2", "3"]:
 player_1 = int(player_1)
 player_2 = player_2()
 
-def game():
- if player_1 == 1:
-    print(img_rock)
+if player_1 == 1:
+    print('''  1
+    _______
+  /       
+ /         
+|   ROCK   |
+ \         /
+  \_______/''')
     if player_2 == 1:
-        print(img_rock) 
+        print('''   
+    _______
+  /       
+ /         
+|   ROCK   |
+ \         /
+  \_______/''') 
         print("Tie")
     elif player_2 == 2:
-        print(img_paper)
+        print('''   
+    _______
+  /       
+ /         
+|   PAPER  |
+ \         /
+  \_______/''')
         print("Computer Wins")
     elif player_2 == 3:
-        print(img_siccors)
+        print('''   
+    _______
+  /       
+ /         
+| SCISSORS |
+ \         /
+  \_______/''')
         print("Player 1 Wins")
- elif player_1 == 2:
-    print(img_paper)
+elif player_1 == 2:
+    print('''   
+    _______
+  /       
+ /         
+|   PAPER  |
+ \         /
+  \_______/''')
     if player_2 == 1:
-        print(img_rock)
+        print('''   
+    _______
+  /       
+ /         
+|   ROCK   |
+ \         /
+  \_______/''')
         print("Player 1 Wins")
     elif player_2 == 2:
-        print(img_paper)
+        print('''   
+    _______
+  /       
+ /         
+|   PAPER  |
+ \         /
+  \_______/''')
         print("Tie")
     elif player_2 == 3:
-        print(img_siccors)
+        print('''   
+    _______
+  /       
+ /         
+| SCISSORS |
+ \         /
+  \_______/''')
         print("Computers Wins")
- elif player_1 == 3:
-    print(img_siccors)
+elif player_1 == 3:
+    print('''   
+    _______
+  /       
+ /         
+| SCISSORS |
+ \         /
+  \_______/''')
     if player_2 == 1:
-        print(img_rock)
+        print('''   
+    _______
+  /       
+ /         
+|   ROCK   |
+ \         /
+  \_______/''')
         print("Computers Wins")
     elif player_2 == 2:
-        print(img_paper)
+        print('''   
+    _______
+  /       
+ /         
+|   PAPER  |
+ \         /
+  \_______/''')
         print("Player 1 Wins")
     elif player_2 == 3:
-        print(img_siccors)
+        print('''   
+    _______
+  /       
+ /         
+| SCISSORS |
+ \         /
+  \_______/''')
         print("Tie")
-
-PlayAgain = "yes" 
-
-while PlayAgain == "yes":
-  game()
-  PlayAgain = input("Play Again? Yes or No?\n")
