@@ -1,11 +1,11 @@
 from ProjectModule import player_2
 
 print("Lets play Rock, Paper and Siccors")
-player_1 = input("Rock is \"1\", Paper is \"2\" and Siccors is \"3\"")
+player_1 = input("Rock is \"1\", Paper is \"2\" and Siccors is \"3\"\n")
 
 while player_1 not in ["1", "2", "3"]:
     print("Please use \"1\" for Rock, \"2\" for Paper and \"3\" for Siccors")
-    player_1 = input("Rock is \"1\", Paper is \"2\" and Siccors is \"3\"")
+    player_1 = input("Rock is \"1\", Paper is \"2\" and Siccors is \"3\"\n")
     
 player_1 = int(player_1)
 player_2 = player_2()
@@ -114,4 +114,4 @@ elif player_1 == 3:
 | SCISSORS |
  \         /
   \_______/''')
-        print("TIe")
+        print("Tie")
