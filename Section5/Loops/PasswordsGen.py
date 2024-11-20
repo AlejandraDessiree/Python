@@ -25,3 +25,6 @@ for sym in range(1, nr_symbols + 1):
     
 random.shuffle(password)
 print("".join(password))
+
+
+print('Te amo mucho alejandra dessire arauz fonsecaaaaa')
