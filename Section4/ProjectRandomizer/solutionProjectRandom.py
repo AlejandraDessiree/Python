@@ -75,12 +75,11 @@ def game():
     elif player2 == 3:
         print(img_siccors)
         print("Tie")
-  
   PlayAgain = input("Play Again? Yes or No?\n")
-  while PlayAgain == "yes":
+  
+  if PlayAgain == "yes":
     game()
-    PlayAgain = input("Play Again? Yes or No?\n")
+  else:
+    print('Te amo mucho alejandra')
 
-
-print(game())
-print('Te amo mucho alejandra')
+game()
