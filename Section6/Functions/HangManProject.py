@@ -81,51 +81,63 @@ def hangman():
  filtered_words = [word for word in words_list if " " not in word]
  word = random.choice(filtered_words).lower()
  print("Welcome to HangMan")
+ word_lenght = len(word)
+ placeholder = ""
+ for position in range(word_lenght):
+    placeholder += "_"
+
+ print("The word you have to guess is: ", placeholder)
  
  guessed_letters = []
  game_over = False
  attempts = 6
- word_lenght = len(word)
+ 
  if attempts == 6:
      print(img_empty)
+    
 
  while attempts > 0 and not game_over:
     display = ""
     placeholder = ""
-    for position in range(word_lenght):
-       placeholder += "_"
+    
   
     guess = input("Guess a letter: ").lower()
      
+    if guess not in word:
+         attempts -= 1
+         print(f"You have {attempts} attempts left")     
+         if attempts == 5:
+          print(img_fail_1)
+         elif attempts == 4:
+          print(img_fail_2)
+         elif attempts == 3:
+          print(img_fail_3) 
+         elif attempts == 2:
+          print(img_fail_4)
+         elif attempts == 1:
+          print(img_fail_5)
+        
     for letter in word:
       if letter == guess:
         display += letter
         guessed_letters.append(guess)
+        print(img_empty)
       elif letter in guessed_letters:
         display += letter
+        if attempts == 5:
+           print(img_fail_1)
+        elif attempts == 4:
+           print(img_fail_2)
+        elif attempts == 3:
+           print(img_fail_3)
+        elif attempts == 2:
+           print(img_fail_4)
+        elif attempts == 1:
+           print(img_fail_5)
       else:
         display += "_"  
             
     print(display)
-      
-    if guess not in word:
-         attempts -= 1
-         print(f"You have {attempts} attempts left")
-         
-    if attempts == 5:
-        print(img_fail_1)
-        
-    if attempts == 4:
-        print(img_fail_2)
-        
-    if attempts == 3:
-        print(img_fail_3)
-        
-    if attempts == 2:
-        print(img_fail_4)
-        
-    if attempts == 1:
-        print(img_fail_5)
       
     if not "_" in display:
       game_over = True
@@ -134,6 +146,7 @@ def hangman():
     if attempts == 0:
       print(img_fail_6)
       game_over = True
+      print("the word was: ", word)
       print("No more attempts, try again")
-  
+
 hangman()
