@@ -10,9 +10,6 @@ while player_1 not in ["1", "2", "3"]:
 player_1 = int(player_1)
 player_2 = player_2()
 
-game_over = False
-
-
 if player_1 == 1:
     print('''  1
     _______
