@@ -2,4 +2,5 @@
 ## Treasure Map project (1) -- finished
 ## Randomizer Projects (3) -- finished
 ## Random Pass Generator (1) -- finished
-## HangMan Project (1) -- WIP
+## HangMan Project (1) -- finished
+## Caesar cipher Project(?) -- WIP
