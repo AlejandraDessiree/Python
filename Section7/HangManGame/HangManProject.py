@@ -106,38 +106,34 @@ def hangman():
  
  if attempts == 6:
      print(img_empty)
-    
-
+  
  while attempts > 0 and not game_over:
     display = ""
     placeholder = ""
-    
-  
     guess = input("Guess a letter: ").lower()
-     
-    if guess not in word:
-         attempts -= 1
-         print(f"You have {attempts} attempts left")     
-         if attempts == 5:
-          print(img_fail_1)
-         elif attempts == 4:
-          print(img_fail_2)
-         elif attempts == 3:
-          print(img_fail_3) 
-         elif attempts == 2:
-          print(img_fail_4)
-         elif attempts == 1:
-          print(img_fail_5)
         
     for letter in word:
       if letter == guess:
         display += letter
         guessed_letters.append(guess)
-        print(img_empty)
       elif letter in guessed_letters:
         display += letter
       else:
         display += "_"  
+        
+    if guess not in word:
+        attempts -= 1
+        print(f"You have {attempts} attempts left")     
+        if attempts == 5:
+          print(img_fail_1)
+        elif attempts == 4:
+          print(img_fail_2)
+        elif attempts == 3:
+          print(img_fail_3) 
+        elif attempts == 2:
+          print(img_fail_4)
+        elif attempts == 1:
+          print(img_fail_5)
             
     print(display)
       
