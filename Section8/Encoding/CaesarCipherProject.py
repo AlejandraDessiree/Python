@@ -38,7 +38,7 @@ def encrypt(original_text, shift_amount):
          shifted_position = shifted_position % len(alphabet)
          shifted_text += alphabet[shifted_position]
     
-    print(shifted_text)
+    print(f"This is your finished text: {shifted_text}")
     
 def decypt(original_text, shift_amount):
     shifted_text = ""
@@ -52,7 +52,7 @@ def decypt(original_text, shift_amount):
          shifted_position = shifted_position % len(alphabet)
          shifted_text += alphabet[shifted_position]
     
-    print(shifted_text)
+    print(f"This is your finished text: {shifted_text}")
 
 def game():    
  if direcction == "encode":
@@ -77,4 +77,4 @@ while not game_over:
         shift = input("Type the shift number:\n")
         game()
     else:
-        print("Invalid input. Please type 'yes' or 'no'.")  
+        print("Invalid input. Please type 'yes' or 'no'.") 
