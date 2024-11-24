@@ -3,6 +3,7 @@ auction_list = {}
 question = "yes"
 max_value = 0
 max_item = ""
+
 logo = '''
                          ___________
                          \         /
