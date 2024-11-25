@@ -125,15 +125,3 @@ def game():
             return "Thanks for playing"
     
 game()
-
-# if player() > 21:
-#     print("Over 21 player")
-# elif dealer() > 21:
-#     print("Over 21 dealer")
-    
-# if player() > dealer():
-#     print("Win")
-# elif player() < dealer():
-#     print("Lose")
-# elif player() == dealer():
-#     print("Draw")
