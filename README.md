@@ -6,4 +6,4 @@
 ## Section 8 - Caesar cipher Project(1) -- finished
 ## Section 9 - Silent Auction PRoject (3) -- finished
 ## Secion 10 - Calculator Project (3) -- finished
-## Section 11 - BalckJAck Capstone Project (?) --  WIP
+## Section 11 - BalckJAck Capstone Project (?) -- finished
