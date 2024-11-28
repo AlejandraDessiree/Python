@@ -92,6 +92,6 @@ def game():
   if PlayAgain == "yes":
     game()
   else:
-    print('Te amo mucho alejandra')
+      print("Game Ended")
 
 game()
