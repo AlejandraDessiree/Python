@@ -42,8 +42,6 @@ Ypur starting money is {money}""")
         
     if bets_player == "raise":
         player_money = int(input("Enter the amount you want to raise the bet for\n$"))
-        while player_money > 25:
-            player_money = int(input("Enter the amount you want to raise the bet for\n$"))
         money = money - player_money
         pot = player_money * 2
         print(f"Your current money is {money}, and the money on the pot is {pot}")
@@ -69,8 +67,6 @@ Computer cards are __ and {dealer_second_card}""")
         
     if bets_player == "raise":
         player_money = int(input("Enter the amount you want to raise the bet for\n$"))
-        while player_money > second_pot:
-            player_money = int(input("Enter the amount you want to raise the bet for\n$"))
         money = money - player_money
         pot = player_money * 2
         print(f"Your current money is {money}, and the money on the pot is {pot}")
